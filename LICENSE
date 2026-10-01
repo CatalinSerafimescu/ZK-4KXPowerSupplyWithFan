@@ -1,4 +1,4 @@
-ZK-4KX Enhanced Power Supply — Copyright (c) 2026 Catalin Serafimescu
+ZK-4KX Power Supply With Fan — Copyright (c) 2026 Catalin Serafimescu
 
 This project uses three licenses. Full texts are in LICENSES/.
 
@@ -15,7 +15,7 @@ This project uses three licenses. Full texts are in LICENSES/.
     *.md files, photos/, schematic images, renders, simulation plots.
 
 Source location (CERN-OHL-S section 4.1):
-  https://github.com/CatalinSerafimescu/ZK-4KXEnhancedPowerSupply
+  https://github.com/CatalinSerafimescu/ZK-4KXPowerSupplyWithFan
 
 Third-party files are NOT covered by the licenses above; they keep their
 original terms. See "Credits and third-party files" in README.md.
