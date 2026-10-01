@@ -1,0 +1,2 @@
+C_pot_max: Temperature sweep, pot at maximum
+PASS  pot at maximum: fan start at 52.0 °C (46–53 °C)

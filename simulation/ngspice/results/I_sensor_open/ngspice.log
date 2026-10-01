@@ -1,0 +1,14 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * zk-4kz fan temperature controller â€” i_sensor_open
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 321
+ngspice-46 done
+Note: Starting dynamic gmin stepping
+Note: Dynamic gmin stepping completed

@@ -1,0 +1,2 @@
+I_sensor_open: Fault: LM35 disconnected
+PASS  sensor open: V_fan ≥ 4.74 V at all temperatures (fail-safe full speed)

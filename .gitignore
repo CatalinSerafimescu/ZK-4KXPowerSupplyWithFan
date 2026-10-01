@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# KiCad — local/user state, backups, caches, locks
+*.kicad_prl
+*-backups/
+.history/
+fp-info-cache
+*.lck
+~*.lck
+_autosave-*
+*-save.kicad_pcb
+*-save.kicad_sch
+*.bak
+*.kicad_sch-bak
+*.kicad_pcb-bak
+
+# OS / editors
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# FreeCAD backups
+*.FCBak
+
+# routing trials (KiCAD/gen/route_trial.py)
+KiCAD/trial/
+
+# LTspice waveform data (run_sim.py deletes it; GUI/MCP runs leave it behind)
+simulation/ltspice/results*/**/*.raw
+
+# Third-party models that may not be redistributed — kept locally, download them yourself (see README.md)
+KiCAD/vendor/
+mechanical/trimmer/3386P-1-103LF.stp
+mechanical/banana/930176100.stp
+simulation/vendor/*.sub
+simulation/vendor/*.mod

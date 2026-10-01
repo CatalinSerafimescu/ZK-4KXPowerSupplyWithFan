@@ -1,0 +1,2 @@
+B_pot_min: Temperature sweep, pot at minimum
+PASS  pot at minimum: fan start at 14.7 °C (≤ 15 °C)

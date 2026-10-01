@@ -1,0 +1,23 @@
+LTspice 26.1.1 for Windows
+Circuit: E:\Catalin\Work\Electronics\SursaTensiune\simulation\ltspice\results\E_powerup_9V_hot\sim.net
+Start Time: Fri Sep 25 16:21:57 2026
+Options:gmin=1e-10 itl1=1000 itl2=500 numdgt=16 plotwinsize=0
+solver = Normal
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = trap
+gmin = 1e-10
+Compress1stOrder = true
+Compress2ndOrder = true
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 0.113 seconds.
+Total iterations: 2641
+
+Files loaded:
+E:\Catalin\Work\Electronics\SursaTensiune\simulation\ltspice\results\E_powerup_9V_hot\sim.net
+E:\Catalin\Work\Electronics\SursaTensiune\simulation\ltspice\models.lib
+E:\Catalin\Work\Electronics\SursaTensiune\simulation\ltspice\models_vendor.lib
+E:\Catalin\Work\Electronics\SursaTensiune\simulation\vendor\onsemi_LM358.mod
+E:\Catalin\Work\Electronics\SursaTensiune\simulation\vendor\LT317A.sub
+

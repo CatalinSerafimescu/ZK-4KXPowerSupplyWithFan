@@ -1,0 +1,9 @@
+# CAD / binary assets: never touch line endings
+*.stp   binary
+*.step  binary
+*.STL   binary
+*.stl   binary
+*.wrl   binary
+*.pdf   binary
+*.png   binary
+*.jpg   binary

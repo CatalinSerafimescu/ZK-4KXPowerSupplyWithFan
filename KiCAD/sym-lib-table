@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "SursaTensiune")(type "KiCad")(uri "${KIPRJMOD}/SursaTensiune.kicad_sym")(options "")(descr "Project symbols (ZK-4KX)"))
+)

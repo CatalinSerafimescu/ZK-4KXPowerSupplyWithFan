@@ -1,0 +1,3 @@
+E_powerup_9V_hot: Power-up 0→9 V at 70 °C
+PASS  max V_fan = 4.914 V (limit 5.25 V)
+PASS  settled V_fan = 4.901 V

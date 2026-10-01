@@ -1,0 +1,2 @@
+G_powerup_9V_cold: Power-up 0→9 V at 25 °C (fan should stay off)
+PASS  cold power-up: max V_fan = 1.62 V (no start-up kick, < 2.0 V)

@@ -1,0 +1,26 @@
+* ============================================================
+* Vendor-model wrappers — same pins/params as LM317B / LM358B in models.lib,
+* so the netlist template only swaps the subcircuit name.
+* Vendor files live in ../vendor (see ../vendor/README.md).
+* ============================================================
+.include ../vendor/onsemi_LM358.mod
+.lib ../vendor/LT317A.sub
+
+* ── LM317 (U1): ADI LT317A, LTspice-encrypted ───────────────
+* Pins: IN ADJ OUT  (LT317A itself is ADJ OUT IN)
+.subckt LM317V in adj out
+X1 adj out in LT317A
+.ends LM317V
+
+* ── LM358 (U2A / U2B): onsemi LM358 (transistor level, 2018) ─
+* Pins: INP INN VCC VEE OUT
+* Built-in values measured as a follower on 5 V, 0.2…3.4 V common mode:
+* offset -0.42 mV (±0.02), input bias 9.6 nA flowing out of the inputs.
+* VOS / IB keep the meaning they have in LM358B (total offset, total bias):
+* the wrapper adds only the difference to the model's built-in values.
+.subckt LM358V inp inn vcc vee out params: VOS=0 IB=45n
+V_os  inp_i inp {VOS+0.42m}
+B_ibp vcc inp I = (IB-9.6n)*min(1, max(0, (V(vcc)-V(inp))/0.1))
+B_ibn vcc inn I = (IB-9.6n)*min(1, max(0, (V(vcc)-V(inn))/0.1))
+X1 inp_i inn vcc vee out LM358
+.ends LM358V

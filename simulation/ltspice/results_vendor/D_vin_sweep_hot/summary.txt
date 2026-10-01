@@ -1,0 +1,4 @@
+D_vin_sweep_hot: Input sweep 6–30 V at 70 °C (fan full)
+PASS  V_in 8.5–30 V: V_fan 4.901–4.901 V (4.5–5.25 V)
+PASS  U1 (LM317) dissipation @ 9 V in: 0.89 W (no heatsink needed, < 1.2 W)
+PASS  U1 (LM317) dissipation @ 30 V in: 5.48 W (heatsink HS1 required)

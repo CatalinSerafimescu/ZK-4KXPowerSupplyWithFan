@@ -1,0 +1,66 @@
+* ============================================================
+* Device models — ZK-4KZ fan temperature controller
+* All ICs are BEHAVIORAL stand-ins (no vendor models used).
+* They capture the DC/static behavior the design relies on:
+* regulation, dropout, output swing limits, offset, bias current.
+* ============================================================
+
+* ── Rectifier diode (fan flyback D1) ────────────────────────
+.model D1N4007 D BV=1000 IS=1e-9 N=2 RS=0.05
+
+* ── Clamp diode used inside the op-amp model ───────────────
+.model DCLAMP D IS=1e-15 N=1
+
+* ── LM317 adjustable regulator (U1) ─────────────────────────
+* Pins: IN ADJ OUT
+* - V(OUT) = V(ADJ) + 1.25 V, 50 mohm output resistance
+* - dropout 1.7 V (datasheet: ~1.7 V @ 0.2 A)
+* - ADJ pin current 50 uA flows OUT of the ADJ pin
+* Voltage-output model (converges robustly); input current is not modeled,
+* dissipation is computed as (V_in - V_out) * I_out in run_sim.py.
+.subckt LM317B in adj out
+I_adj in adj 50u
+B_o o_int 0 V = max(0, min(V(adj)+1.25, V(in)-1.7))
+R_o o_int out 0.05
+.ends LM317B
+
+* ── 78L05 fixed 5 V regulator (U3) ──────────────────────────
+* Pins: IN GND OUT — 5.00 V, dropout 1.7 V, 3 mA quiescent, 0.1 ohm output
+.subckt REG78L05 in gnd out
+I_q in gnd 3m
+B_o o_int gnd V = max(0, min(5.0, V(in,gnd)-1.7))
+R_o o_int out 0.1
+.ends REG78L05
+
+* ── LM35 temperature sensor (U4) ────────────────────────────
+* Pins: VS VOUT GND T   — T is a stimulus node whose voltage = temperature in °C
+* 10 mV/°C, needs Vs >= 4 V (output scaled down below that), 60 uA quiescent
+.subckt LM35B vs vout gnd t
+I_q vs gnd 60u
+B_o vo_int gnd V = V(t)*0.01 * min(1, max(V(vs,gnd),0)/4)
+R_o vo_int vout 1
+.ends LM35B
+
+* ── LM358 op-amp, one section (U2A / U2B) ───────────────────
+* Pins: INP INN VCC VEE OUT
+* - DC gain 100 dB, GBW ~1 MHz
+* - output swing: VEE+5 mV .. VCC-1.5 V (LM358 V_OH @ 5 V supply)
+* - VOS: input offset (param), IB: input bias current (param, flows OUT of
+*   the input pins — PNP input stage). IB pulls a floating input toward VCC.
+.subckt LM358B inp inn vcc vee out params: VOS=0 IB=45n
+B_ibp vcc inp I = IB*min(1, max(0, (V(vcc)-V(inp))/0.1))
+B_ibn vcc inn I = IB*min(1, max(0, (V(vcc)-V(inn))/0.1))
+I_q   vcc vee 350u
+B_g   vee n1 I = 1e-3*(V(inp) + VOS - V(inn))
+R_g   n1 vee 1e8
+C_g   n1 vee 159p
+* keep the integrator node from winding up far past the rails
+E_hi  nhi vee vcc vee 1
+E_lo  nlo vee vee vee 1
+D_hi  n1 nhi DCLAMP
+D_lo  nlo n1 DCLAMP
+B_out o_int vee V = min(max(V(n1,vee), 0.005), V(vcc,vee)-1.5)
+R_out o_int out 20
+.ends LM358B
+
+.end

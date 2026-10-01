@@ -1,0 +1,2 @@
+H_wiper_open: Fault: pot wiper open, worst-case LM358 bias 250 nA
+FAIL  wiper open, worst-case IB: fan start at 23.0 °C (fail-safe ON, ≤ 20 °C)

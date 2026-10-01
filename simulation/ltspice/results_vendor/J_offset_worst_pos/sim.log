@@ -1,0 +1,26 @@
+LTspice 26.1.1 for Windows
+Circuit: E:\Catalin\Work\Electronics\SursaTensiune\simulation\ltspice\results_vendor\J_offset_worst_pos\sim.net
+Start Time: Fri Sep 25 16:21:44 2026
+Options:gmin=1e-10 itl1=1000 itl2=500 method=gear numdgt=16 plotwinsize=0
+solver = Normal
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = Gear
+gmin = 1e-10
+Compress1stOrder = true
+Compress2ndOrder = true
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Total elapsed time: 0.568 seconds.
+Total iterations: 12197
+
+Files loaded:
+E:\Catalin\Work\Electronics\SursaTensiune\simulation\ltspice\results_vendor\J_offset_worst_pos\sim.net
+E:\Catalin\Work\Electronics\SursaTensiune\simulation\ltspice\models.lib
+E:\Catalin\Work\Electronics\SursaTensiune\simulation\ltspice\models_vendor.lib
+E:\Catalin\Work\Electronics\SursaTensiune\simulation\vendor\onsemi_LM358.mod
+E:\Catalin\Work\Electronics\SursaTensiune\simulation\vendor\LT317A.sub
+

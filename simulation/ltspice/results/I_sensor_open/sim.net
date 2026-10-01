@@ -1,0 +1,59 @@
+* ZK-4KZ fan temperature controller — I_sensor_open
+* LTspice port — placeholders are filled by run_sim.py from ../scenarios.py
+.include E:/Catalin/Work/Electronics/SursaTensiune/simulation/ltspice/models.lib
+.include E:/Catalin/Work/Electronics/SursaTensiune/simulation/ltspice/models_vendor.lib
+.param POT_A=0.6662 VOS_A=0 VOS_B=0 IB=45n
+
+* ── Stimuli ─────────────────────────────────────────────────
+V_IN  vin 0 DC 9
+V_T   t   0 25
+
+* ── Input (shared with ZK-4KZ input) ───────────────────────
+C1    vin 0 100n
+C3    vin 0 100n
+
+* ── 5 V auxiliary rail (U3) ─────────────────────────────────
+X_U3  vin 0 v5 REG78L05
+C4    v5 0 10u
+C5    v5 0 100n
+
+* ── Temperature sensor (U4, off-board via J2) ──────────────
+X_U4  v5 n_lm35 0 t LM35B
+R_ls  n_lm35 n_u2a_p 1T
+
+* ── Threshold setting: R1 + RV1 (panel pot) → U2B follower ─
+R1    v5 n_pot_top 100k
+R_RVa n_pot_top n_wiper {10k*(1-POT_A)+1m}
+R_RVb n_wiper 0       {10k*POT_A+1m}
+R_lw  n_wiper n_u2b_p 1m
+R5    n_u2b_p 0 100k
+X_U2B n_u2b_p n_vref v5 0 n_vref LM358B params: VOS={VOS_B} IB={IB}
+
+* ── Amplifier U2A: V_adj = 11*V_lm35 - 10*V_ref ────────────
+R2    n_vref n_u2a_n 10k
+R3    n_u2a_n n_adj  100k
+X_U2A n_u2a_p n_u2a_n v5 0 n_adj LM358B params: VOS={VOS_A} IB={IB}
+
+* ── Fan regulator U1: V_fan = V_adj + 1.25 V ────────────────
+X_U1  vin n_adj n_u1out LM317B
+V_i317 n_u1out vfan 0
+R4    vfan 0 220
+* C2 is an aluminium electrolytic (EEAGA1E100H): real ESR, 1 ohm is conservative.
+* With 0 ohm the LT317A + onsemi LM358 (class-B output on ADJ) oscillate; 0.2 ohm is already stable.
+C2    vfan 0 10u Rser=1
+D1    0 vfan D1N4007
+
+* ── Fan: 5 V / 0.2 A modeled as 25 ohm ──────────────────────
+R_fan  vfan n_fanm 25
+V_ifan n_fanm 0 0
+
+* ── Convergence aids ───────────────────────────────────────
+.options gmin=1e-10 itl1=1000 itl2=500 
+.nodeset v(v5)=5
+
+* ── Analysis / output (LTspice: no .control block) ─────────
+* numdgt=16 → double-precision .raw, plotwinsize=0 → no waveform compression
+.options numdgt=16 plotwinsize=0
+.save V(vin) V(t) V(v5) V(n_vref) V(n_adj) V(vfan) I(V_i317) I(V_ifan)
+.dc V_T 0 80 0.25
+.end

@@ -1,0 +1,21 @@
+ZK-4KX Enhanced Power Supply — Copyright (c) 2026 Catalin Serafimescu
+
+This project uses three licenses. Full texts are in LICENSES/.
+
+  Hardware design files         CERN-OHL-S-2.0   LICENSES/CERN-OHL-S-2.0.txt
+    KiCad project (KiCAD/), Gerbers, print PDFs, enclosure and
+    solder-mask jig models (mechanical/enclosure/, mechanical/mask_jig/),
+    board and heatsink 3D models made for this project.
+
+  Software                      MIT              LICENSES/MIT.txt
+    All Python scripts (*.py), SPICE netlists, templates and models
+    written for this project (simulation/).
+
+  Documentation and images      CC-BY-SA-4.0     LICENSES/CC-BY-SA-4.0.txt
+    *.md files, photos/, schematic images, renders, simulation plots.
+
+Source location (CERN-OHL-S section 4.1):
+  https://github.com/CatalinSerafimescu/ZK-4KXEnhancedPowerSupply
+
+Third-party files are NOT covered by the licenses above; they keep their
+original terms. See "Credits and third-party files" in README.md.

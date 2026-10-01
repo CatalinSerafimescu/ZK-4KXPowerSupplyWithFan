@@ -1,0 +1,5 @@
+A_nominal_40C: Temperature sweep, threshold set for 40 °C, 9 V in
+PASS  25 °C: V_fan = 1.25 V (fan off, < 1.6 V)
+PASS  fan start (2.8 V) at 40.1 °C (expected 40.0 ± 1.0 °C)
+PASS  62 °C: V_fan = 4.74 V (full speed, ≥ 4.5 V)
+PASS  max V_fan = 4.740 V (limit 5.25 V)

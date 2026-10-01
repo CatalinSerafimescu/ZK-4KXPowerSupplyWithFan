@@ -1,0 +1,3 @@
+K_offset_worst_neg: LM358 offset corner: U2A −7 mV, U2B +7 mV (uncalibrated)
+PASS  fan start (2.8 V) at 41.3 °C (expected 40.0 ± 1.5 °C)
+PASS  max V_fan = 4.901 V (limit 5.25 V)
