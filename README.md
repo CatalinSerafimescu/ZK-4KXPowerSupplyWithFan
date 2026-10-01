@@ -84,7 +84,10 @@ These files are not mine and keep their original terms (they are **not** covered
   [Printables 401707](https://www.printables.com/model/401707-basic-model-zk-4kx-buck-boost-converter), CC0.
 - `mechanical/button/DS-431_square_push_button_red.step` — from
   [GrabCAD](https://grabcad.com/cads/files/da40e36f2500ba5d71d7cf6f930e5d73/original.step).
-- `mechanical/fan/Fan_30x30x10_5V_2pin.step` — modified from A. Kirchner's 30×30×8 fan model.
+- `mechanical/fan/Fan_30x30x10_5V_2pin.step` — modified from A. Kirchner's 30×30×8 fan model,
+  [GrabCAD](https://grabcad.com/library/fan-30x30x8mm-5v-2-pin-1).
+- `mechanical/dc_jack/DC_jack_5.5x2.1_panel_10A.step` (+ 2 renders) — from
+  [GrabCAD](https://grabcad.com/library/power-jack-socket-5-5-x-2-1-mm-10a-dc-1).
 - `mechanical/heatsink/*.jpg` — TME product images of the Stonecold RAD-DY-KY heatsink.
 - ZK-4KX datasheet and heatsink datasheet are linked, not included.
 
