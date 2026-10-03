@@ -8,8 +8,11 @@ Outside **98 W × 128 D × 68 H mm**. Two printed parts. The `.3mf` files are al
 both on the bed); the `.stl` files are in assembly position.
 
 **Bambu Studio project:** [`Enclosure_A1_project.3mf`](Enclosure_A1_project.3mf) — Bambu Lab A1, 0.4 nozzle,
-0.20mm Standard, Bambu PLA Basic, no supports; plate 1 = base (≈ 10 h 50 min), plate 2 = cover (≈ 3 h 25 min).
-Made from the two `.3mf` files with the Bambu Studio CLI (`--arrange 1 --orient 0`, system presets, objects/plates renamed).
+0.20mm Standard, Bambu PLA Basic, no supports; plate 1 = base (≈ 2 h 45 min), plate 2 = cover (≈ 45 min).
+Made from the two `.3mf` files with the Bambu Studio CLI, using the system presets with their `inherits` chains
+flattened first (the CLI doesn't resolve them and falls back to a 200 × 200 bed); then split into two plates
+and renamed by hand. The plain `.3mf` files open in Bambu Studio with a "geometry only" notice — expected for
+3MFs not made by Bambu Studio.
 
 | Part | What | Print |
 |---|---|---|
