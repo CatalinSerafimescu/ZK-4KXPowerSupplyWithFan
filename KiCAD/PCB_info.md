@@ -6,7 +6,8 @@ KiCad 10. Open `SursaTensiune.kicad_pro`.
 - **Schematic** — complete, ERC 0 violations. Generated from `gen/gen_sch.py` + `../bom.py`.
 - **PCB** — 90 × 66 mm, **routed single-sided** (B.Cu only, no vias, no jumpers) for home etching (toner transfer),
   GND = copper pour on B.Cu. DRC clean, 0 unconnected. Previews: `board.pdf`, `board_top.png`, `board_bottom.png`,
-  `board_3d.png`. **Etching print:** `toner_B.Cu_1to1.pdf`. **Fab files:** `gerber/SursaTensiune_gerbers.zip`.
+  `board_3d.png`. **Etching print:** `toner_B.Cu_1to1.pdf`. **Fab files:** `gerber/SursaTensiune_gerbers.zip`;
+  assembly BOM for PCBWay `SursaTensiune_BOM_PCBWay.xlsx` (`gen/gen_pcbway_bom.py`, from `bom.py` + PCBWay's template).
 
 ## Regenerating
 ```bash
