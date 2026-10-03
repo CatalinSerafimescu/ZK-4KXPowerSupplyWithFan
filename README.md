@@ -25,7 +25,7 @@ Everything runs from the same DC input (9 V / 2 A adapter tested, up to ~28 V su
 | Schematic | [KiCAD/SursaTensiune_sch.pdf](KiCAD/SursaTensiune_sch.pdf) |
 | PCB print for toner transfer (+ solder mask film), A4, print at 100 % | [KiCAD/toner_B.Cu_1to1.pdf](KiCAD/toner_B.Cu_1to1.pdf) |
 | Gerbers + drill files for ordering the PCB | [KiCAD/gerber/SursaTensiune_gerbers.zip](KiCAD/gerber/SursaTensiune_gerbers.zip) |
-| Enclosure, printable | [Enclosure_base.3mf](mechanical/enclosure/Enclosure_base.3mf), [Enclosure_cover.3mf](mechanical/enclosure/Enclosure_cover.3mf) (print orientation; STL and STEP next to them) — see [enclosure notes](mechanical/enclosure/README.md) |
+| Enclosure, printable | [Enclosure_base.3mf](mechanical/enclosure/Enclosure_base.3mf), [Enclosure_cover.3mf](mechanical/enclosure/Enclosure_cover.3mf) (print orientation; STL and STEP next to them), [Bambu Studio project for the A1](mechanical/enclosure/Enclosure_A1_project.3mf) — see [enclosure notes](mechanical/enclosure/README.md) |
 | Solder-mask jig, printable (optional) | [Mask_jig.stl](mechanical/mask_jig/Mask_jig.stl) — see [jig notes](mechanical/mask_jig/README.md) |
 | KiCad 10 project | [KiCAD/](KiCAD/) — see [PCB_info.md](KiCAD/PCB_info.md) |
 

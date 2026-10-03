@@ -7,6 +7,10 @@ the result is saved as [`Enclosure_assembly.FCStd`](Enclosure_assembly.FCStd).
 Outside **98 W × 128 D × 68 H mm**. Two printed parts. The `.3mf` files are already in print orientation (cover flipped,
 both on the bed); the `.stl` files are in assembly position.
 
+**Bambu Studio project:** [`Enclosure_A1_project.3mf`](Enclosure_A1_project.3mf) — Bambu Lab A1, 0.4 nozzle,
+0.20mm Standard, Bambu PLA Basic, no supports; plate 1 = base (≈ 10 h 50 min), plate 2 = cover (≈ 3 h 25 min).
+Made from the two `.3mf` files with the Bambu Studio CLI (`--arrange 1 --orient 0`, system presets, objects/plates renamed).
+
 | Part | What | Print |
 |---|---|---|
 | `Enclosure_base` (.step / .stl / .3mf) | Open box: floor + all 4 walls, board standoffs, 4 corner magnet bosses | Floor down, no slicer supports (built-in breakaway pane in the ZK-4KX cutout, see below) |
