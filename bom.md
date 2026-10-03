@@ -6,7 +6,8 @@
 
 **Required:**
 
-- 4× **M3** — Board mounting: M3 standoffs + screws (any (nylon or brass, 8–10 mm))
+- 4× **M3** — Board mounting: M3×10 screws + M3 nuts (any)
+- 4× **M3×16** — Fan mounting: M3×16 screws + M3 nuts (any)
 
 **Optional:**
 
@@ -33,7 +34,7 @@
 | XU2 | DIP-8 socket | 1 | IC socket, DIP-8, 300 mil | Soclu DIP 8 pini | ✅ inventory | comp_235 | For U2 (footprint DIP-8_W7.62mm_Socket). |
 | HS1 | RAD-DY-KY/3 | 1 | Heatsink, Stonecold RAD-DY-KY/3, TO-220/TO-3P, 40×20 mm profile, 30 mm tall, 2 PCB pins @ 34 mm, M3 thread, 6.9 K/W | RAD-DY-KY/3 (Stonecold, TME) | ✅ inventory | comp_224 | U1 up to 5.3 W @ 30 V in → Tj ≈ Ta + 5.3·(6.9 + 3 + ~1) ≈ Ta + 58 °C. Stands upright on its 2 solder pins; U1 sits in the fin gap, screwed to the M3 thread. |
 | — | TO220-SET | 1 | TO-220 insulating mounting set (pad + bushing), Stonecold | TO220-SET (Stonecold) — alt: Fischer MST 220 (comp_222) | ✅ inventory | comp_223 | Required: U1 tab = V_fan, heatsink must be isolated. Add M3 screw + nut if not in the set. |
-| H1, H2, H3, H4 | M3 | 4 | Board mounting: M3 standoffs + screws | any (nylon or brass, 8–10 mm) | 🛒 buy |  |  |
+| H1, H2, H3, H4 | M3 | 4 | Board mounting: M3×10 screws + M3 nuts | any | 🛒 buy |  | Into the 6 mm standoffs printed in the enclosure base; nuts in the hex pockets under the floor. |
 | — | Kapton tape | 1 | Kapton tape 12 mm | Banda Kapton 12mm | ✅ inventory | comp_147 | Fix LM35 to the ZK-4KX rear heatsink. |
 | PS1 | ZK-4KX | 1 | Buck-boost CC/CV panel module, 5–30 V in, 0.5–30 V / 4 A out, 79×43×26 mm (cutout 71×39) | ZK-4KX (boxed panel version) | ✅ have |  | 35 W natural / 50 W with active cooling — the reason for this fan. Own OTP 80–110 °C. Do not tie OUT− to IN−. |
 | M1 | Fan 5V 0.2A | 1 | Fan, 30×30×10 mm, 5 V, 0.2 A, 2-wire (Raspberry Pi type) | — | ✅ have |  | Runs 1.25 V (off) … ~4.75 V (full). Plug into J3. |
@@ -41,3 +42,5 @@
 | SW1 | DS-431 latching | 1 | Push switch, latching (self-locking), square 14 mm red, snap-in, 2 pins (SPST) | DS-431 | ✅ have |  | Power switch on the front panel, in the + wire from J5 to ZK-4KX IN+ and J1 pin 1. Panel hole ≈ 11.7 × 11.0 mm. Check the DC current rating: ≥ 2 A for the 9 V / 2 A adapter, ≈ 5 A for a 30 V supply at the ZK-4KX's full 30 V / 4 A output. |
 | J6 | Banana red | 1 | Banana socket 4 mm, female, red, panel | Mufa Banana 4mm mama rosu | ✅ inventory | comp_226 | ZK-4KX OUT+. |
 | J7 | Banana black | 1 | Banana socket 4 mm, female, black, panel | Mufa Banana 4mm mama negru | ✅ inventory | comp_227 | ZK-4KX OUT−. |
+| — | M3×16 | 4 | Fan mounting: M3×16 screws + M3 nuts | any | 🛒 buy |  | Through the 2.4 mm left wall of the enclosure base. |
+| — | Magnet Ø5×3 | 8 | Neodymium magnet, Ø5 × 3 mm | — | ✅ inventory | comp_193 | Lid: 4 pairs in the corner bosses of the base and cover, glued with CA. Mind the polarity. |

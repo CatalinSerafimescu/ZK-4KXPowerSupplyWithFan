@@ -141,9 +141,9 @@ BOM = [
     },
     {
         "refs": ["H1", "H2", "H3", "H4"], "value": "M3", "qty": 4, "status": "buy", "inv": None,
-        "description": "Board mounting: M3 standoffs + screws",
-        "part_number": "any (nylon or brass, 8–10 mm)",
-        "notes": "",
+        "description": "Board mounting: M3×10 screws + M3 nuts",
+        "part_number": "any",
+        "notes": "Into the 6 mm standoffs printed in the enclosure base; nuts in the hex pockets under the floor.",
     },
     {
         "refs": [], "value": "Kapton tape", "qty": 1, "status": "inventory", "inv": "comp_147",
@@ -188,6 +188,16 @@ BOM = [
         "refs": ["J7"], "value": "Banana black", "qty": 1, "status": "inventory", "inv": "comp_227", "offboard": True,
         "description": "Banana socket 4 mm, female, black, panel", "part_number": "Mufa Banana 4mm mama negru",
         "notes": "ZK-4KX OUT−.",
+    },
+    {
+        "refs": [], "value": "M3×16", "qty": 4, "status": "buy", "inv": None, "offboard": True,
+        "description": "Fan mounting: M3×16 screws + M3 nuts", "part_number": "any",
+        "notes": "Through the 2.4 mm left wall of the enclosure base.",
+    },
+    {
+        "refs": [], "value": "Magnet Ø5×3", "qty": 8, "status": "inventory", "inv": "comp_193", "offboard": True,
+        "description": "Neodymium magnet, Ø5 × 3 mm", "part_number": "—",
+        "notes": "Lid: 4 pairs in the corner bosses of the base and cover, glued with CA. Mind the polarity.",
     },
 ]
 

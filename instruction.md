@@ -26,12 +26,12 @@ With the 9 V / 2 A adapter the ZK-4KX can deliver about 15 W (it draws ≈ 3× t
 
 ## 2. Parts and tools
 
-All parts are in [bom.md](bom.md) with inventory IDs. **Still to buy:** 4× M3 standoffs + screws for the board.
+All parts are in [bom.md](bom.md) with inventory IDs. **Still to buy:** 4× M3×10 screws + nuts for the board, 4× M3×16 screws + nuts for the fan.
 Check before starting: the JST XH kit shows **qty −5** in the inventory — make sure you have 2× 2-pin and 1× 3-pin headers + housings + crimps.
 
 | Board parts | Off-board parts |
 |---|---|
-| U1 LM317T/NOPB, U2 LM358AP (+ DIP-8 socket), U3 UA78L05, R1 100k, R2 10k, R3 100k, R4 220 Ω, R5 100k, RV1 3386P 10k trimmer, C1/C3/C5 100 nF, C2/C4 10 µF 25 V, D1 1N4007, J1 XH-2, J2 XH-3, J3 XH-2, HS1 RAD-DY-KY/3 + Stonecold TO220-SET insulating kit | PS1 ZK-4KX, M1 fan 30×30 5 V 0.2 A, U4 LM35DZ, J5 DC jack 5.5×2.1 panel, SW1 DS-431 latching push switch, J6/J7 4 mm banana sockets red/black, Kapton tape, thermal paste |
+| U1 LM317T/NOPB, U2 LM358AP (+ DIP-8 socket), U3 UA78L05, R1 100k, R2 10k, R3 100k, R4 220 Ω, R5 100k, RV1 3386P 10k trimmer, C1/C3/C5 100 nF, C2/C4 10 µF 25 V, D1 1N4007, J1 XH-2, J2 XH-3, J3 XH-2, HS1 RAD-DY-KY/3 + Stonecold TO220-SET insulating kit | PS1 ZK-4KX, M1 fan 30×30 5 V 0.2 A, U4 LM35DZ, J5 DC jack 5.5×2.1 panel, SW1 DS-431 latching push switch, J6/J7 4 mm banana sockets red/black, Kapton tape, thermal paste, 8× Ø5×3 mm magnets (lid) |
 
 Tools: soldering iron, multimeter, JST XH crimp tool, screwdriver for the trimmer, M3 screwdriver/nut driver, heat-shrink.
 Wire: **0.75–1 mm² (AWG 18)** for input and ZK-4KX output (up to 4 A); thin wire (AWG 24–26) for fan and LM35.
@@ -114,9 +114,11 @@ At 9 V input U1 dissipates ≈ 0.9 W; at 30 V ≈ 5.3 W (Tj ≈ ambient + 58 °C
 
 ## 5. Enclosure and wiring
 
-Printed case: [mechanical/enclosure/](mechanical/enclosure/README.md) — base (floor + front + rear panels) and a U-shaped cover.
+Printed case: [mechanical/enclosure/](mechanical/enclosure/README.md) — an open base (floor + all 4 walls) and a top cover.
 Front panel: ZK-4KX on top; below it, left to right: power switch SW1, red **+**, black **−**. DC jack on the rear.
-Board on 4 × 6 mm standoffs (M3×10 + nuts under the floor), cover held by 4 × M3×10 from below, fan on the cover's left wall.
+Board on the 4 × 6 mm standoffs printed in the base (M3×10 + nuts in the hex pockets under the floor), fan on the base's left wall
+(4 × M3×16 + nuts), cover held by 4 pairs of Ø5×3 mm magnets glued into the corners (mind the polarity — see the
+[enclosure notes](mechanical/enclosure/README.md#assembly)). A Ø5 hole in the cover gives access to the trimmer RV1.
 **Trim all board leads to ≤ 3 mm** below the PCB (6 mm standoffs).
 
 ### ZK-4KX (PS1)
@@ -163,7 +165,7 @@ The ZK-4KX has a finned aluminium heatsink in the middle of its back PCB, above 
 ### Fan (M1) and board
 - Place the fan so it blows **onto the ZK-4KX's rear heatsink**; give the enclosure inlet and outlet vents.
   The fan is **10 mm** thick (STEP model: `mechanical/fan/Fan_30x30x10_5V_2pin.step`).
-- Mount the board on 4 M3 standoffs; keep the **trimmer RV1 reachable** with a screwdriver and U2 pin 7 reachable
+- Mount the board on the printed standoffs; keep the **trimmer RV1 reachable** with a screwdriver and U2 pin 7 reachable
   with a probe (for calibration).
 - HS1 is not connected to any net (U1's tab is insulated from it) — still keep it clear of other metal.
 
