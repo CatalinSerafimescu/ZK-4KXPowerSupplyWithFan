@@ -25,7 +25,7 @@ Everything runs from the same DC input (9 V / 2 A adapter tested, up to ~28 V su
 | Schematic | [KiCAD/SursaTensiune_sch.pdf](KiCAD/SursaTensiune_sch.pdf) |
 | PCB print for toner transfer (+ solder mask film), A4, print at 100 % | [KiCAD/toner_B.Cu_1to1.pdf](KiCAD/toner_B.Cu_1to1.pdf) |
 | Gerbers + drill files for ordering the PCB | [KiCAD/gerber/SursaTensiune_gerbers.zip](KiCAD/gerber/SursaTensiune_gerbers.zip) |
-| Enclosure, printable | [Enclosure_base.stl](mechanical/enclosure/Enclosure_base.stl), [Enclosure_cover.stl](mechanical/enclosure/Enclosure_cover.stl) (STEP next to them) — see [enclosure notes](mechanical/enclosure/README.md) |
+| Enclosure, printable | [Enclosure_base.3mf](mechanical/enclosure/Enclosure_base.3mf), [Enclosure_cover.3mf](mechanical/enclosure/Enclosure_cover.3mf) (print orientation; STL and STEP next to them) — see [enclosure notes](mechanical/enclosure/README.md) |
 | Solder-mask jig, printable (optional) | [Mask_jig.stl](mechanical/mask_jig/Mask_jig.stl) — see [jig notes](mechanical/mask_jig/README.md) |
 | KiCad 10 project | [KiCAD/](KiCAD/) — see [PCB_info.md](KiCAD/PCB_info.md) |
 
@@ -73,7 +73,7 @@ Everything runs from the same DC input (9 V / 2 A adapter tested, up to ~28 V su
 | `schematic/` | Schematic image (schemdraw, `gen_schematic.py`), labels from `bom.py` |
 | `KiCAD/` | KiCad 10 project, generator scripts (`gen/`), print PDF, Gerbers. See `KiCAD/PCB_info.md`. |
 | `simulation/` | Same scenarios in ngspice 46 and LTspice 26 |
-| `mechanical/` | Enclosure and solder-mask jig (FreeCAD scripts, STEP, STL), part models used for fit checks. See `mechanical/README.md`. |
+| `mechanical/` | Enclosure and solder-mask jig (FreeCAD scripts, STEP, STL, 3MF), part models used for fit checks. See `mechanical/README.md`. |
 | `photos/` | Build photos |
 
 ## Credits and third-party files

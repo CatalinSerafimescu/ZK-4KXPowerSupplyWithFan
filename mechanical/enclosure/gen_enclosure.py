@@ -277,4 +277,12 @@ else:
 import MeshPart  # noqa: E402
 for name, shp in (("Enclosure_base", base), ("Enclosure_cover", cover)):
     MeshPart.meshFromShape(Shape=shp, LinearDeflection=0.05, AngularDeflection=0.2).write(os.path.join(HERE, name + ".stl"))
+# 3MF in print orientation, on the bed at the origin: base floor-down, cover upside down (top on the bed)
+for name, shp, flip in (("Enclosure_base", base, False), ("Enclosure_cover", cover, True)):
+    p = shp.copy()
+    if flip:
+        p.rotate(V(0, 0, 0), V(1, 0, 0), 180)
+    bb = p.BoundBox
+    p.translate(V(-bb.XMin, -bb.YMin, -bb.ZMin))
+    MeshPart.meshFromShape(Shape=p, LinearDeflection=0.05, AngularDeflection=0.2).write(os.path.join(HERE, name + ".3mf"))
 print("Base valid", base.isValid(), "vol %.0f" % base.Volume, "| Cover valid", cover.isValid(), "vol %.0f" % cover.Volume)

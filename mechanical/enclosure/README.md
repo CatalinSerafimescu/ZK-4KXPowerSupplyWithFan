@@ -4,12 +4,13 @@ Parametric FreeCAD script: [`gen_enclosure.py`](gen_enclosure.py) (all dimension
 [`assembly.py`](assembly.py) places the real part models (ZK-4KX, board, fan, banana sockets, power switch, DC jack) for checking;
 the result is saved as [`Enclosure_assembly.FCStd`](Enclosure_assembly.FCStd).
 
-Outside **98 W × 128 D × 68 H mm**. Two printed parts:
+Outside **98 W × 128 D × 68 H mm**. Two printed parts. The `.3mf` files are already in print orientation (cover flipped,
+both on the bed); the `.stl` files are in assembly position.
 
 | Part | What | Print |
 |---|---|---|
-| `Enclosure_base` (.step / .stl) | Open box: floor + all 4 walls, board standoffs, 4 corner magnet bosses | Floor down, no slicer supports (built-in breakaway pane in the ZK-4KX cutout, see below) |
-| `Enclosure_cover` (.step / .stl) | Top only (the chamfered cap, split at Z 65): lip inside the walls, 4 corner magnet blocks | **Upside down** (top on the bed), no supports |
+| `Enclosure_base` (.step / .stl / .3mf) | Open box: floor + all 4 walls, board standoffs, 4 corner magnet bosses | Floor down, no slicer supports (built-in breakaway pane in the ZK-4KX cutout, see below) |
+| `Enclosure_cover` (.step / .stl / .3mf) | Top only (the chamfered cap, split at Z 65): lip inside the walls, 4 corner magnet blocks | **Upside down** (top on the bed), no supports |
 
 Style: rounded vertical corners (R6), 45° chamfer on the top edges (3 mm), 1.2 mm chamfer on the bottom edges
 (bed adhesion / elephant foot). Front and rear panels can be printed in a second colour.
