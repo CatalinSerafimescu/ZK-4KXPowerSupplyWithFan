@@ -104,6 +104,12 @@ These files are not mine and keep their original terms (they are **not** covered
 
 Everything else (schematic, PCB, Gerbers, enclosure, behavioral simulations) works without them.
 
+## Support
+
+If this project saved you some time, you can buy me a coffee (via PayPal):
+
+<a href="https://www.paypal.com/donate/?hosted_button_id=YSV46KQ6EUAEE"><img src="photos/coffee.svg" alt="Buy me a coffee" height="60"></a>
+
 ## License
 
 Copyright © 2026 Catalin Serafimescu. See [LICENSE](LICENSE):
